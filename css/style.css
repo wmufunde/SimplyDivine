@@ -10,12 +10,17 @@
    background-image: url(../img/massage1.jpg);
     
      background-repeat:no-repeat;
-    background-size: cover;
-    width:3000px;
+    /*background-size: cover;*/
+    background-size:contain;
+    width:100%;
     height:1000px;
     float:right;
     bottom:0;
     right:0;
+    overflow: hidden;
+    /*position: absolute;
+    z-index: -1;*/
+    
 }
 
 body {
@@ -33,17 +38,26 @@ ul {
   list-style: none;
 }
 p {
+    font-family: 'Acme', sans-serif; 
 	font-size: .95em;
 	margin-bottom: 1.8em;
 }
 
 h1 {
-    font-family: AR BERKLEY;
-    font-size: 70px;
+    font-family: 'Dancing Script', cursive;
+    
+    /*font-family: AR BERKLEY; */
+    font-size: 85px;
 }
-h2,
+
+.my-h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 75px;
+    text-align: center;
+}
+
 h3,
-a {
+ {
 	color: #093a58;
 }
 h2,
@@ -55,6 +69,15 @@ a {
 }
 img {
 	max-width: 100%;
+}
+
+h1 {
+      text-align: center;
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
 }
 
 /* ================================= 
@@ -78,7 +101,7 @@ img {
 }
 .main-nav a {
 	font-size: .95em;
-	color: mediumpurple;
+	color: #371749;
 	text-transform: uppercase;
     text-align: right;
 }
@@ -98,7 +121,7 @@ img {
 }
 .banner {
 	color: #fff;
-	background: mediumpurple;
+	background: #371749;
 	padding: 3.2em 0;
 	/*margin-bottom: 48px; */
 }
@@ -112,6 +135,26 @@ img {
 	margin-top: 30px;
 }
 
+.col img {
+    width:100%;
+    height:100%; 
+    transition: all .2s ease-in-out; 
+margin-top: 10px;
+    position: relative;
+}
+
+.col img:hover {
+    transform: scale(1.1);
+    
+    
+}
+
+}
+
+.treatments img {
+    margin-top: 10px;
+}
+
 /* ---- Page Elements ---- */
 
 .logo {
@@ -122,6 +165,13 @@ img {
 }
 .feat-img {
 	border-radius: 5px;
+}
+
+.centered {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ================================= 
@@ -137,11 +187,23 @@ img {
 	.tagline {
 		font-size: 1.4em;
 	}
+    
+     
+    
 }
 @media (min-width: 1025px) {
 	.main-header,
 	.row {
 		width: 80%;
-		max-width: 1150px;
+		height: auto;
 	}
+    
+}
+
+/* ====================================
+    Image Filter
+====================================== */
+.massage {
+-webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(50%);
 }

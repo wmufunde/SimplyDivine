@@ -5,7 +5,8 @@
 @media (min-width: 769px) {
     .main-header,
     .main-nav,
-    .row {
+    .row
+    {
         display: flex;
     }
     
@@ -24,7 +25,11 @@
     
     
     .col {
-        flex: 1;
+        flex: 1 50%;  
+    }
+    
+    .row {
+        flex-wrap: wrap;
     }
 
 }
@@ -36,8 +41,12 @@
         justify-content: space-between;
     }
     
-    .primary {
-        flex: 2;
+    .col {
+        flex-basis: 0;
     }
+    .row {
+        flex-wrap: nowrap;
+    }
+    
 
 }
